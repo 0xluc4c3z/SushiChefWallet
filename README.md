@@ -1,13 +1,29 @@
-# Sample Hardhat Project
+# SushiChefWallet - Challenge
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Wallet that encapsulates all the actions necessary to enter/exit the Sushiswap's liquidity mining program in a single, handy transaction. Based on what was proposed in this challenge: 
+[SushiSwap - Blockchain Developer](https://github.com/Lucacez/SushiChefWallet/blob/main/docs/Sushiswap%20-%20Blockchain%20Developer.pdf)
 
-Try running some of the following tasks:
+## Tests
+### Hardhat
+To install dependencies:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+Run `npm install` to install dependencies and run `npx hardhat compile` to compile the project.
+
+For testing simply run: 
 ```
+npx hardhat test
+```
+
+## Deploy
+To deploy it on ethereum mainnet, first uncomment the mainnet network:
+```
+  networks: {
+    hardhat: {},
+    //mainnet: {
+      //url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_APY_KEY}`,
+      //accounts: [`0x${process.env.PRIVATE_KEY}`]
+    //}
+  },
+```
+
+Then copy the `.env.example` to a file called `.env` and add an [Alchemy Node ID](https://www.alchemy.com/) for ETH-MAINNET under the variable `ALCHEMY_APY_KEY`, and add your private key to `PRIVATE_KEY`
