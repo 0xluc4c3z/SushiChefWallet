@@ -27,3 +27,8 @@ To deploy it on ethereum mainnet, first uncomment the mainnet network:
 ```
 
 Then copy the `.env.example` to a file called `.env` and add an [Alchemy Node ID](https://www.alchemy.com/) for ETH-MAINNET under the variable `ALCHEMY_APY_KEY`, and add your private key to `PRIVATE_KEY`
+
+And finally make sure to enter the LP address according to the pool you want to join:
+```
+  const LPs = "DEPENDS_ON_THE_POOL"
+```
