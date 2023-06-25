@@ -9,10 +9,10 @@ dotenv.config();
 const config: HardhatUserConfig = {
   networks: {
     hardhat: {},
-    ethereum: {
-      url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_APY_KEY}`,
-      accounts: [`0x${process.env.PRIVATE_KEY}`]
-    }
+    //ethereum: {
+      //url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_APY_KEY}`,
+      //accounts: [`0x${process.env.PRIVATE_KEY}`]
+    //}
   },
   solidity: {
     compilers: [
